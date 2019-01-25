@@ -1,0 +1,57 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="always" />
+
+    <!-- 注意这个地方searchview的写法和actionbar的不同 如果用actionbar的写法会有很多错误-->
+    <!--android:icon="@drawable/ic_launcher_foreground"
+    app:showAsAction="always|collapseActionView" 这里添加了 collapseActionView就可以监听到 搜索展开收缩事件
+    如果不添加collapseActionView 就监听不到展开收缩，当点击搜索时，系统自动帮你展开或收缩其的菜单
+    -->
+    <item
+        android:id="@+id/action_search"
+        android:title="search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
+    <!--
+    app:actionProviderClass="com.example.bjb184.mytoolbar.MyActionProvider" 这里可以继承实现 ActionProvider
+
+    -->
+    <item
+        android:id="@+id/action_intent"
+        android:icon="@mipmap/ic_back"
+        app:showAsAction="ifRoom"
+        android:title="菜单">
+        <menu>
+            <!-- 将group中的菜单项放于一个组里面 -->
+            <group>
+                <item android:id="@+id/toolbar_r_1"
+                    android:title="登录"
+                    app:showAsAction="ifRoom"
+                    />
+                <item android:id="@+id/toolbar_r_2"
+                    android:title="注册"
+                    app:showAsAction="ifRoom"
+                    />
+                <item android:id="@+id/toolbar_r_3"
+                    android:title="设置"
+                    app:showAsAction="ifRoom"
+                    />
+            </group>
+        </menu>
+    </item>
+    <!--
+   <item
+       android:id="@+id/delete"
+       android:icon="@drawable/ic_picture_in_picture_black_18dp"
+       android:showAsAction="ifRoom"
+       android:title="delete" />
+-->
+
+</menu>

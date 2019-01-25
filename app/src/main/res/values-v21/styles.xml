@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@android:color/holo_red_dark</item>
+
+        <!--过度颜色-->
+        <item name="android:textColorSecondary">@android:color/tab_indicator_text</item>
+
+
+        <!--设置主题背景色 （toolbar）-->
+        <item name="colorPrimary">@android:color/holo_blue_dark</item>
+        <!--设置状态栏背景色-->
+        <item name="colorPrimaryDark">@android:color/holo_green_light</item>
+        <!--系统控件图标的颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--设置状态栏背景色-->
+        <item name="android:statusBarColor">@color/colorAccent</item>
+        <!--底部导航栏背景色-->
+        <item name="android:navigationBarColor">@android:color/holo_blue_dark</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+    </style>
+</resources>
